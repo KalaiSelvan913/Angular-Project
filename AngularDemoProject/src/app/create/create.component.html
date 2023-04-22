@@ -1,0 +1,194 @@
+<div class="col-lg">
+    <div class="container-fluid">
+        <h3 class="text-center fs-4">ADD Data</h3>
+    </div>
+    <form [formGroup]="creationForm">
+        <div class="row gx-3 p-5 m-4 align-items-center shadow rounded bg-gradient text-dark">
+            <!-- UserName Field -->
+            <div class="col-md-3">
+                <div class="form-group mt-3">
+                    <label for="name" class="fw-bold">User: </label>
+                    <div class="inputWithIcon">
+                        <input type="text" class="form-control" formControlName="userName" placeholder="Name"
+                            [ngClass]="{'is-invalid' : submitted && f['userName'].errors}" />
+                        <i class="fa fa-user fa-lg fa-fw"></i>
+                        <!-- Validation  For  Name-->
+                        <div *ngIf="submitted && f['userName'].errors" class="invalid-feedback">
+                            <div *ngIf="f['userName'].errors['required']">
+                                Name is Required !!!!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Password Field -->
+            <div class="col-md-3">
+                <div class="form-group mt-3">
+                    <label for="password" class="fw-bold">Password: </label>
+                    <div class="inputWithIcon">
+                        <input matInput [type]="showPassword ? 'text' : 'password'" placeholder="Password"
+                            class="form__input" formControlName="password"
+                            [ngClass]="{'is-invalid' : submitted && f['password'].errors}">
+                        <i class="fa fa-key fa-lg fa-fw key"></i>
+                        <mat-icon matSuffix (click)="togglePasswordVisibility()">
+                            {{showPassword?'visibility_off':'visibility'}}
+                        </mat-icon>
+                        <!-- Validation  For  password-->
+                        <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                            <div *ngIf="f['password'].errors['required']">
+                                password is Required !!!!
+                            </div>
+                            <div *ngIf="f['password'].errors['minlength']">Password Atleast 6 character</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Email Field -->
+            <div class="col-md-3">
+                <div class="form-group mt-3">
+                    <label for="password" class="fw-bold">Email: </label>
+                    <div class="inputWithIcon">
+                        <input type="text" class="form-control" formControlName="email" placeholder="Email"
+                            [ngClass]="{'is-invalid' : submitted && f['email'].errors}" />
+                        <i class="fa fa-envelope fa-lg fa-fw"></i>
+                        <!-- Validation  For  email-->
+                        <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                            <div *ngIf="f['email'].errors['required']">
+                                Email is Required !!!!
+                            </div>
+                            <div *ngIf="f['email'].errors['pattern']">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Created-By Field -->
+            <div class="col-md-3">
+                <div class="form-group mt-3">
+                    <label for="createdBy" class="fw-bold">Created-By: </label>
+                    <div class="inputWithIcon">
+                        <input type="text" class="form-control" id="createdBy" formControlName="createdBy"
+                            placeholder="Created By" [ngClass]="{'is-invalid' : submitted && f['createdBy'].errors}" />
+                        <i class="fa fa-user-circle-o fa-lg fa-fw" aria-hidden="true"></i>
+                        <!-- Validation  For  createdBy-->
+                        <div *ngIf="submitted && f['createdBy'].errors" class="invalid-feedback">
+                            <div *ngIf="f['createdBy'].errors['required']">
+                                Creater Name is Required !!!!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Created-Date Field -->
+            <div class="col-md-3">
+                <div class="form-group mt-3">
+                    <label for="createdDate" class="fw-bold">Created-Date: </label>
+                    <div class="inputWithIcon">
+                        <input type="date" class="form-control" id="createdDate" formControlName="createdDate"
+                            placeholder="Created Date" />
+                        <i class="fa fa-calendar-plus-o fa-lg fa-fw" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Upload File Field -->
+            <div class="col-md-3 mt-3 ms-2">
+                <label class="fw-bold" for="upload">Upload File: </label>
+                <input type="file" name="file" id="file" (change)="onChange($event)" class="form-control">
+            </div>
+            <!-- Excel Upload Field -->
+            <div class="col-md-3 mt-3 ">
+                <label class="me-1 fw-bold" for="upload">Upload Data in Excel: </label>
+                <input type="file" name="file" id="file1" (change)="onChange($event)" class="form-control">
+            </div> 
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">Skills :</label>
+                </div><br>
+                <div class="col-auto">
+                    <div formArrayName="skills">
+                        <div *ngFor="let skill of skills.controls; let i=index">
+                            <div [formGroupName]="i" class="mb-3">
+                                <!-- {{i}} -->
+                                <div class="inputWithIcon">
+                                    <div class="col-auto">
+                                        <input type="text" formControlName="skill" placeholder="Skill Known" id="skill">
+                                        <i class="fa fa-plus fa-fw fa-lg ms-3 plus" aria-hidden="true"
+                                            (click)="addSkills()" id="plus"></i>
+                                        <i class="fa fa-times fa-fw fa-lg ms-3 remove" aria-hidden="true" *ngIf="i>0"
+                                            (click)="removeSkill(i)" id="remove"></i>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-auto">
+                                <input type="text" formControlName="exp" placeholder="Experience">
+                            </div> -->
+                            </div>
+                            <!-- <div class="col-auto">
+                                <i class="fa fa-plus fa-fw fa-lg ms-3 plus" aria-hidden="true"
+                                    (click)="addSkills()"></i> -->
+                            <!-- <div *ngIf="i>0"> -->
+                            <!-- <i class="fa fa-times fa-fw fa-lg ms-3" aria-hidden="true" *ngIf="i>0"
+                                    (click)="removeSkill(i)"></i> -->
+                            <!-- </div> -->
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-12 text-center mt-5">
+                <button type="submit" class="btn btn-primary btn-lg text-center" (click)="submit()">Submit</button>
+                <button type="submit" class="btn btn-success btn-lg text-center ms-3" (click)="uploadFileToDb()">Upload
+                    File</button>
+                <button type="submit" class="btn btn-warning btn-lg text-center ms-3" (click)="uploadToDb()">Upload
+                    Excel</button>
+            </div>
+            <!-- </div> -->
+            <!-- <button class="btn btn-danger" (click)="futureDateDisable()">check</button> -->
+            <!-- <input type="file" name="file" id="file" (change)="fileChange($event.target)"> -->
+        </div>
+    </form>
+</div>
+<div class="container">
+    <div class="row gx-3 p-5 m-4 border shadow">
+         <!-- Download File Field -->
+         <p class="fs-2 fw-bold h2 text-center mb-5 bg-secondary text-light title1">File Downloads</p>
+         <div [formGroup]="fileDownload" class="ms-5" id="formdownload">
+            <div class="col-md-4 mb-5" id="sub1">
+                <label for="download" class="fw-bold h5"> <b> Download File By ID: </b></label>
+                <div class="inputWithIcon" id="">
+                <input type="text" name="" id="download1" class="form-control" placeholder="Enter File Id"
+                formControlName="fileId">
+                <button class="fa fa-download fa-lg btn btn-lg border download" (click)="downloadById()">
+            </button>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <label for="download" class="fw-bold fs-5"> <b> Download File By Name & Date Of Creation: </b></label>
+                <input type="text" name=""  class="form-control" placeholder="Enter Created BY"
+                formControlName="fileCreater" >
+            </div>
+            <div class="col-md-4">
+                <label for="" class="h5"></label>
+                <input type="date" name=""  class="form-control" placeholder="Enter Created Date"
+                formControlName="fileDate">
+            </div>
+            <button class="btn btn-primary btn-lg ms-5 mt-3 w-25 button"  (click)="downloadFile()">Download
+                File</button>
+                <!-- <select name="trail" id="trail" >
+                    <option value="">default</option>
+                    <option *ngFor="let data of dataList" [ngValue]="data">
+                        {{ data.userName }}
+                    </option>
+                </select> -->
+        </div>
+        <!-- File Upload Field -->
+        <!-- <div class="col-md-12 mt-5"> -->
+        <!-- <div class="col-md-4 mt-5">
+        <label class="fw-bold" for="upload">Upload File: </label>
+        <input type="file" name="file" id="file" (change)="onChange($event)" class="form-control" style="width:70%;">
+        <button type="submit" class="btn btn-success btn-lg text-center mt-3" (click)="uploadFileToDb()">Upload
+            File</button>
+    </div> -->
+
+    </div>
+</div>

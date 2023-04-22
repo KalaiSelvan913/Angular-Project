@@ -1,0 +1,327 @@
+label {
+  font-family: 'Merriweather', serif;
+  font-weight: 500;
+}
+
+h5 {
+  font-family: 'Merriweather', serif;
+  ;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.register {
+  /* background-image: url("../../assets/img/welcome.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.register {
+  width: auto;
+  height: 130vh;
+}
+
+
+.color {
+  background-color: aqua;
+}
+
+h1 {
+  position: relative;
+  margin-top: 10px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+.icon-position {
+  position: relative;
+  right: 35px;
+}
+
+form {
+  background: rgba(228, 228, 221, 0.4);
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+.inputWithIcon i {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
+}
+.inputWithIcon .download {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  padding: 3px 8px;
+  color: rgb(45, 143, 32);
+  transition: 0.3s;
+}
+
+.inputWithIcon input[type="text"]:focus+i {
+  color: dodgerBlue;
+}
+
+.inputWithIcon input[type="text"]:focus+.key {
+  color: dodgerBlue;
+}
+
+.inputWithIcon.inputIconBg i {
+  background-color: #aaa;
+  color: #fff;
+  padding: 9px 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.inputWithIcon.inputIconBg input[type="text"]:focus+i {
+  color: #fff;
+  background-color: dodgerBlue;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.inputWithIcon input[type="text"] {
+  padding-left: 40px;
+}
+ #download1{
+  padding-left: 10px;
+}
+
+.inputWithIcon input[type="date"] {
+  padding-left: 40px;
+}
+
+input[type="date"] {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input[type="date"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.inputWithIcon.inputIconBg input[type="date"]:focus+i {
+  color: #fff;
+  background-color: dodgerBlue;
+}
+
+.inputWithIcon input[type="date"]:focus+i {
+  color: dodgerBlue;
+}
+
+#team {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+#team:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.inputWithIcon #team {
+  padding-left: 40px;
+}
+
+/* .inputWithIcon #password {
+    padding-right: 40px;
+  } */
+
+.inputWithIcon.inputIconBg #team:focus+i {
+  color: #fff;
+  background-color: dodgerBlue;
+}
+
+.inputWithIcon #team:focus+i {
+  color: dodgerBlue;
+}
+
+input[type="password"] {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input[type="password"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.inputWithIcon mat-icon {
+  position: absolute;
+  right: 17px;
+  top: 10px;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.inputWithIcon.inputIconBg mat-icon {
+  background-color: #aaa;
+  color: #fff;
+  padding: 9px 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.inputWithIcon input[type="text"]:focus+mat-icon {
+  color: dodgerBlue;
+}
+
+.inputWithIcon input[type="password"]:focus+mat-icon {
+  color: dodgerBlue;
+}
+
+.inputWithIcon.inputIconBg input[type="text"]:focus+mat-icon {
+  color: #fff;
+  background-color: dodgerBlue;
+}
+
+.inputWithIcon.inputIconBg input[type="password"]:focus+mat-icon {
+  color: #fff;
+  background-color: dodgerBlue;
+}
+
+.inputWithIcon i #password {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.inputWithIcon input[type="password"] {
+  padding-left: 40px;
+}
+
+.inputWithIcon .key {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
+}
+
+.inputWithIcon input[type="text"]:focus+.key {
+  color: dodgerBlue;
+}
+
+.inputWithIcon input[type="password"]:focus+.key {
+  color: dodgerBlue;
+}
+
+.inputWithIcon.inputIconBg input[type="text"]:focus+.key {
+  color: #fff;
+  background-color: dodgerBlue;
+}
+
+.inputWithIcon.inputIconBg .key {
+  background-color: #aaa;
+  color: #fff;
+  padding: 9px 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 10vw;
+}
+i{
+  color: red;
+}
+
+.plus{
+  color:greenyellow;
+}
+.sf{
+  width:20%
+}
+.inputWithIcon .plus {
+  position: absolute;
+  left: 95%;
+  top: 12px;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
+}
+.inputWithIcon .remove {
+  position: absolute;
+  left: 110%;
+  top: 12px;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
+}
+#skill {
+  padding-left: 10px;
+}
+
+#plus{
+  color:rgb(157, 223, 60);
+}
+#remove{
+  color: red;
+}
+#name{
+  margin-top: 16px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+#dateCreated{
+  margin-top: 16px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+#formDownload{
+  margin-top: 20px;
+}
+.title1{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+

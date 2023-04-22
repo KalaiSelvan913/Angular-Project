@@ -1,0 +1,37 @@
+
+<nav class="navbar  navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TESTING</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item ms-5" routerLinkActive="active">
+            <a class="nav-link border rounded ms-3" aria-current="page" *ngIf="service.isUserLoggedIn()" routerLink="create">Create</a>
+          </li>
+          <li class="nav-item ms-5" routerLinkActive="active">
+            <a class="nav-link border rounded ms-3" aria-current="page" *ngIf="service.isUserLoggedIn()" routerLink="email">Generate Email</a>
+          </li>
+          <li class="nav-item dropdown border rounded ms-5">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"  data-bs-toggle="dropdown" aria-expanded="false">
+              View Data
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li routerLinkActive="active"><a class="dropdown-item" *ngIf="service.isUserLoggedIn()" routerLink="/header/display">Your Data</a></li>
+              <li routerLinkActive="active"><a class="dropdown-item" *ngIf="service.isUserLoggedIn()" routerLink="/header/view">All Data</a></li>
+              <!-- <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+            </ul>
+          </li>      
+        </ul>
+        
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li routerLinkActive="active">
+            <a class="nav-link" (click)="logout()"  routerLink="" ><i class="fa fa-sign-out fa-lg fa-fw" aria-hidden="true" ></i> LOG OUT</a>
+          </li>
+        </ul>
+        </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>

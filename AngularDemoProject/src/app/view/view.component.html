@@ -1,0 +1,154 @@
+
+
+<div class="view">
+    <div class="container">
+        <div class="table-responsive mt-3 table-striped">
+            <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Emp_ID</th>
+                        <th>UserName</th>
+                        <!-- <th>Password</th> -->
+                        <th>Email ID</th>
+                        <th>Created-By</th>
+                        <th>Created-Date</th>
+                        <th>Skills</th>
+                        <th>Action</th>
+                        <th>Export</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of dataList" id="table">
+                        <td>{{data.empId}}</td>
+                        <td>{{data.userName}}</td>
+                        <!-- <td>{{data.password}}</td> -->
+                        <td>{{data.email}}</td>
+                        <td>{{data.createdBy}}</td>
+                        <td>{{data.createdDate}}</td>
+                        <td>{{data.reply}}</td>
+                        <td><button type="button" class="btn btn-warning ms-3" data-bs-toggle="tooltip"
+                            data-bs-placement="top" title="Edit" (click)="onEdit(data.empId)" > <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
+                        <td>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="tooltip"
+                            data-bs-placement="top" title="PDF" (click)="openPDF(data)"> <i class="fa fa-file-pdf-o">
+                            </i></button>
+                            <button type="button" class="btn btn-success ms-3" data-bs-toggle="tooltip"
+                            data-bs-placement="top" title="Excel" (click)="exportAsXLSX(data)"> <i class="fa fa-file-excel-o"></i></button>
+                            
+                            <!-- <button type="button" class="btn btn-success ms-3" data-bs-toggle="tooltip"
+                            data-bs-placement="top" title="Excel" (click)="excel(data)"> <i class="fa fa-file-excel-o"></i> SampleExcel</button> -->
+                        </td>
+                        <!-- <td>
+                            <button type="button" class="btn btn-warning by-sm" data-bs-toggle="tooltip"
+                                data-bs-placement="top" title="Edit" (click)="onEdit(data.name)">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger ms-3 bt-sm" data-bs-toggle="tooltip"
+                                data-bs-placement="top" title="Delete" (click)="delete(data)">
+                                <i class="fa fa-trash"></i></button>
+                        </td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="viewForm"> -->
+
+<!-- Name Input Field -->
+<!-- <div class="form-group mt-3">
+                        <label for="ForName"> Name :</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control shadow bg-body rounded" formControlName="name" readonly>
+                            <span class="input-group-append">
+                                <button class="btn  ms-n3" type="button">
+                                    <i class="fa fa-user-circle-o"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div> -->
+
+<!-- Email Input Field -->
+<!-- <div class="form-group mt-3">
+                        <label for="ForEmail"> Email :</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control shadow bg-body rounded" formControlName="email">
+                            <span class="input-group-append">
+                                <button class="btn  ms-n3" type="button">
+                                    <i class="fa fa-envelope"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div> -->
+
+<!-- PhoneNumber Input Field -->
+<!-- <div class="form-group mt-3">
+                        <label for="ForPhoneNumber"> PhoneNumber :</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control shadow bg-body rounded" formControlName="phone" maxlength="10">
+                            <span class="input-group-append">
+                                <button class="btn  ms-n3" type="button">
+                                    <i class="fa fa-phone"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div> -->
+
+<!-- DateOfBirth Input Field -->
+<!-- <div class="form-group mt-3">
+                        <label class="control-label col-sm-5" for="ForDob">Date Of Birth :</label>
+                        <div class="input-group">
+                            <input type="date" class="form-control shadow bg-body rounded" id="dob" name="dob"
+                                formControlName="dob" />
+                            <span class="input-group-append">
+                                <button class="btn  ms-n3" type="button">
+                                    <i class="fa fa-calendar-plus-o"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                     -->
+<!-- <div class="form-group mt-4">
+                        <label class="control-label col-sm-5" for="ForGender">Gender :</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" formControlName="gender" id="Male" value="Male">
+                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" formControlName="gender" id="Female" value="Female">
+                            <label class="form-check-label" for="inlineRadio1">Female</label>
+                          </div>
+                    </div> -->
+
+<!-- <div class="form-group mt-3">
+                        <label class="control-label col-sm-5" for="ForTeam">Team :</label>
+                        <select class="form-select shadow bg-body rounded" formControlName="team" aria-label="Default select example">
+                            <option selected>Select Team</option>
+                            <option value="LIC">LIC</option>
+                            <option value="RS">RS</option>
+                            <option value="GoPolicy">GoPolicy</option>
+                          </select>
+                    </div> -->
+
+
+<!-- </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="edit()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "timer" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner> 

@@ -1,0 +1,284 @@
+/* body {
+    color: #999;
+    background: #f5f5f5;
+    font-family: 'Varela Round', sans-serif;
+} */
+.form-control {
+    box-shadow: none;
+    border-color: #ddd;
+}
+.form-control:focus {
+    border-color: #4aba70; 
+}
+.login-form {
+    width: 350px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.login-form form {
+    color: #434343;
+    border-radius: 1px;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #f3f3f3;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.login-form h4 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.login-form .avatar {
+    color: #fff;
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 9;
+    background: #4aba70;
+    padding: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.login-form .avatar i {
+    font-size: 62px;
+}
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+.login-form .form-control, .login-form .btn {
+    min-height: 40px;
+    border-radius: 10px; 
+    transition: all 0.5s;
+}
+.login-form .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.login-form .btn {
+    background: #4aba70;
+    border: none;
+    line-height: normal;
+}
+.login-form .btn:hover, .login-form .btn:focus {
+    background: #42ae68;
+}
+.login-form .checkbox-inline {
+    float: left;
+}
+.login-form input[type="checkbox"] {
+    margin-top: 2px;
+}
+.login-form .forgot-link {
+    float: right;
+}
+.login-form .small {
+    font-size: 13px;
+}
+.login-form a {
+    color: #4aba70;
+}
+#submit{
+    text-align: center;
+}
+.icon-position{
+    position:relative;
+    right :35px;
+}
+.inputWithIcon {
+    position: relative;
+  }
+  
+  .inputWithIcon i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+  }
+  .inputWithIcon input[type="text"]:focus + i {
+    color: rgb(38, 255, 30);
+  }
+  .inputWithIcon input[type="password"]:focus + i {
+    color: rgb(38, 255, 30);
+  }
+  .inputWithIcon.inputIconBg i {
+    background-color: #aaa;
+    color: #fff;
+    padding: 9px 4px;
+    border-radius: 4px 0 0 4px;
+  }
+  .inputWithIcon.inputIconBg input[type="text"]:focus + i {
+    color: #fff;
+    background-color: rgb(38, 255, 30);
+  }
+  .inputWithIcon.inputIconBg input[type="password"]:focus + i {
+    color: #fff;
+    background-color: rgb(38, 255, 30);
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: rgb(38, 255, 30);
+    box-shadow: 0 0 8px 0 rgb(38, 255, 30);
+  }
+  
+  .inputWithIcon input[type="text"] {
+    padding-left: 40px;
+  }
+  .inputWithIcon input[type="date"] {
+    padding-left: 40px;
+  }
+  input[type="date"] {
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+
+  input[type="date"]:focus {
+    border-color: rgb(38, 255, 30);;
+    box-shadow: 0 0 8px 0 rgb(38, 255, 30);;
+  }
+  .inputWithIcon.inputIconBg input[type="date"]:focus + i {
+    color: #fff;
+    background-color: rgb(38, 255, 30);;
+  }
+
+  .inputWithIcon input[type="date"]:focus + i {
+    color: rgb(38, 255, 30);;
+  }
+
+#team{
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;  
+}
+#team:focus {
+    border-color: rgb(38, 255, 30);;
+    box-shadow: 0 0 8px 0 rgb(38, 255, 30);;
+  }
+  .inputWithIcon #team {
+    padding-left: 40px;
+  }
+  /* .inputWithIcon #password {
+    padding-right: 40px;
+  } */
+
+  .inputWithIcon.inputIconBg #team:focus + i {
+    color: #fff;
+    background-color: rgb(38, 255, 30);;
+  }
+
+  .inputWithIcon #team:focus + i {
+    color: rgb(38, 255, 30);;
+  }
+
+  input[type="password"] {
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+  input[type="password"]:focus {
+    border-color: rgb(38, 255, 30);
+    box-shadow: 0 0 8px 0 rgb(38, 255, 30);
+  }
+  .inputWithIcon mat-icon {
+    position: absolute;
+	right: 17px;
+    top: 2px;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+  }
+  .inputWithIcon.inputIconBg mat-icon {
+    background-color: #aaa;
+    color: #fff;
+    padding: 9px 4px;
+    border-radius: 4px 0 0 4px;
+  }
+  .inputWithIcon input[type="text"]:focus + mat-icon {
+    color: rgb(38, 255, 30);;
+  }
+  .inputWithIcon input[type="password"]:focus + mat-icon {
+    color: rgb(38, 255, 30);;
+  }
+ 
+  .inputWithIcon.inputIconBg input[type="text"]:focus + mat-icon {
+    color: #fff;
+    background-color: rgb(38, 255, 30);;
+  }
+  .inputWithIcon.inputIconBg input[type="password"]:focus + mat-icon {
+    color: #fff;
+    background-color: rgb(38, 255, 30);;
+  }
+  .inputWithIcon i #password {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+  }
+  .inputWithIcon input[type="password"] {
+    padding-left: 40px;
+  }
+  .inputWithIcon .key {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+}
+.inputWithIcon input[type="text"]:focus + .key {
+  color: rgb(38, 255, 30);;
+}
+.inputWithIcon input[type="password"]:focus + .key {
+  color: rgb(38, 255, 30);;
+}
+
+.inputWithIcon.inputIconBg input[type="text"]:focus + .key {
+  color: #fff;
+  background-color: rgb(38, 255, 30);
+}
+.inputWithIcon.inputIconBg input[type="password"]:focus + .key {
+  color: #fff;
+  background-color: rgb(38, 255, 30);
+}
+.inputWithIcon.inputIconBg .key {
+  background-color: #aaa;
+  color: #fff;
+  padding: 9px 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+  
+  

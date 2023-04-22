@@ -1,0 +1,144 @@
+label{
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
+}
+
+h5{
+    font-family: 'Merriweather', serif;;
+}
+
+h1{
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+}
+.register{
+    /* background-image: url("../../assets/img/welcome.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.register{
+    width: auto;
+    height: 130vh;
+}
+
+
+.color{
+    background-color: aqua;
+}
+
+h1{
+    position: relative;
+    margin-top: 10px;
+    color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+.icon-position{
+    position:relative;
+    right :35px;
+}
+
+form{
+    background:rgba(228, 228, 221, 0.4);
+}
+.inputWithIcon {
+    position: relative;
+  }
+  
+  .inputWithIcon i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+  }
+  .inputWithIcon input[type="text"]:focus + i {
+    color: dodgerBlue;
+  }
+  .inputWithIcon.inputIconBg i {
+    background-color: #aaa;
+    color: #fff;
+    padding: 9px 4px;
+    border-radius: 4px 0 0 4px;
+  }
+  .inputWithIcon.inputIconBg input[type="text"]:focus + i {
+    color: #fff;
+    background-color: dodgerBlue;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+  }
+  
+  .inputWithIcon input[type="text"] {
+    padding-left: 40px;
+  }
+  .inputWithIcon input[type="date"] {
+    padding-left: 40px;
+  }
+  input[type="date"] {
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+
+  input[type="date"]:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+  }
+  .inputWithIcon.inputIconBg input[type="date"]:focus + i {
+    color: #fff;
+    background-color: dodgerBlue;
+  }
+
+  .inputWithIcon input[type="date"]:focus + i {
+    color: dodgerBlue;
+  }
+
+#team{
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;  
+}
+#team:focus {
+    border-color: dodgerBlue;
+    box-shadow: 0 0 8px 0 dodgerBlue;
+  }
+  .inputWithIcon #team {
+    padding-left: 40px;
+  }
+
+  .inputWithIcon.inputIconBg #team:focus + i {
+    color: #fff;
+    background-color: dodgerBlue;
+  }
+
+  .inputWithIcon #team:focus + i {
+    color: dodgerBlue;
+  }

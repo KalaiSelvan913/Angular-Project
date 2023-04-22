@@ -1,0 +1,45 @@
+<div class="container mt-5 border shadow">
+    <h1 class="text-center fw-bold mb-5 mt-3" id="title">Generate Email</h1>
+    <form action="" [formGroup]="emailForm" class="mt-4">
+        <!-- <div class="mb-3 row">
+            <label for="inputPassword" class="col-md-2 col-form-label fw-bold text-center mb-4">From </label>
+            <div class="col-md-10">
+                <input type="text" class="form-control"  value="kalaiselvan.b@fasoftwares.com" readonly>
+            </div>
+        </div> -->
+        <div class="mb-3 row">
+            <label for="inputPassword" class="col-md-3 col-form-label fw-bold text-end mb-4">To :</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" formControlName="emailTo">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPassword" class="col-md-3 col-form-label fw-bold text-end mb-4">CC :</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" formControlName="emailCc">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPassword" class="col-md-3 col-form-label fw-bold text-end mb-4">Subject :</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" formControlName="emailSubject">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPassword" class="col-md-3 col-form-label fw-bold text-end mb-4">Message :</label>
+            <div class="col-md-6">
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" formControlName="emailMsg"></textarea>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPassword" class="col-md-3 col-form-label fw-bold text-end mb-4">Attachment: </label>
+            <div class="col-md-6">
+                <input type="file" multiple class="form-control" (change)="onChange($event)">
+            </div>
+        </div>
+        <div class="col-auto text-center mt-5">
+        <button class="btn btn-lg btn-success rounded" (click)="onSubmit()">SEND</button>
+        <button class="btn btn-lg btn-danger rounded ms-2" (click)="sendAttachment()" >Send with Attachment</button>
+    </div>
+    </form>
+</div>

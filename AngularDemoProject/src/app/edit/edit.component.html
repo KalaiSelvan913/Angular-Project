@@ -1,0 +1,113 @@
+
+<div class="col-lg">
+    <form [formGroup]="viewForm">
+        <div class="row gx-3 p-5 m-4 align-items-center shadow rounded bg-warning text-dark">
+             <!-- empID Field -->
+             <div class="col-md-3">
+                <div class="form-group mt-3">
+                    <label for="createdDate" class="fw-bold">ID: </label>
+                    <div class="inputWithIcon">
+                        <input type="text" class="form-control" id="empId" name="empId"
+                            formControlName="empId" placeholder="Created Date" readonly/>
+                            <i class="fa fa-id-card fa-lg fa-fw" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- UserName Field -->
+            <div class="col-md-3">
+                <div class="form-group mt-3">
+                    <label for="name" class="fw-bold">User: </label>
+                    <div class="inputWithIcon">
+                        <input type="text" class="form-control" id="name" name="userName" formControlName="userName"
+                            placeholder="Name" />
+                        <i class="fa fa-user fa-lg fa-fw"></i>
+                        <!-- Validation  For  Name-->
+                        <!-- <div *ngIf="submitted && f['userName'].errors" class="invalid-feedback">
+                            <div *ngIf="f['userName'].errors['required']">
+                                Name is Required !!!!
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Password Field -->
+            <div class="col-md-3">
+                <div class="form-group mt-3">
+                    <label for="password" class="fw-bold">Password: </label>
+                    <div class="inputWithIcon">
+                        <input type="text" class="form-control" id="password" name="password" formControlName="password"
+                            placeholder="Password"  />
+                        <i class="fa fa-key fa-lg fa-fw"></i>
+                         <!-- Validation  For  password-->
+                         <!-- <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                            <div *ngIf="f['password'].errors['required']">
+                                password is Required !!!!
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+             <!-- Email Field -->
+             <div class="col-md-3">
+                <div class="form-group mt-3">
+                    <label for="password" class="fw-bold">Email: </label>
+                    <div class="inputWithIcon">
+                        <input type="text" class="form-control" id="email" name="email" formControlName="email"
+                            placeholder="Email"  />
+                        <i class="fa fa-envelope fa-lg fa-fw"></i>
+                         <!-- Validation  For  email-->
+                         <!-- <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                            <div *ngIf="f['email'].errors['required']">
+                                Email is Required !!!!
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Created-By Field -->
+            <div class="col-md-3">
+                <div class="form-group mt-3">
+                    <label for="createdBy" class="fw-bold">Created-By: </label>
+                    <div class="inputWithIcon">
+                        <input type="text" class="form-control" id="createdBy" name="createdby"
+                            formControlName="createdBy" placeholder="Created By" />
+                        <i class="fa fa-user-circle-o fa-lg fa-fw" aria-hidden="true"></i>
+                        <!-- Validation  For  createdBy-->
+                        <!-- <div *ngIf="submitted && f['createdBy'].errors" class="invalid-feedback">
+                            <div *ngIf="f['createdBy'].errors['required']">
+                                Creater Name is Required !!!!
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Created-Date Field -->
+            <div class="col-md-3">
+                <div class="form-group mt-3">
+                    <label for="createdDate" class="fw-bold">Created-Date: </label>
+                    <div class="inputWithIcon">
+                        <input type="date" class="form-control" id="createdDate" name="createddate"
+                            formControlName="createdDate" placeholder="Created Date" />
+                        <i class="fa fa-calendar-plus-o fa-lg fa-fw" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Skills Field -->
+            <div class="col-md-3">
+                <div class="form-group mt-3">
+                    <label for="createdDate" class="fw-bold">Skills: </label>
+                    <div class="inputWithIcon">
+                        <input type="text" class="form-control" id="skills" name="skills"
+                            formControlName="skills" placeholder="Skills" />
+                        <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Submit Button Field -->
+            <div class="col-md-12 text-center mt-5">
+                <button type="submit" class="btn btn-primary btn-lg text-center" (click)="saveEdit()" >Save Edit</button>
+            </div>
+            <!-- <input type="file" name="file" id="file" (change)="fileChange($event.target)"> -->
+        </div>
+    </form>
+</div>

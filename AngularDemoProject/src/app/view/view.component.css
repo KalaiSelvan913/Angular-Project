@@ -1,0 +1,25 @@
+table{
+    text-align: center;
+}
+
+table, th, td {
+	border: 1px ;
+}
+
+tr:nth-child(even) {
+    background-color: lightgrey;
+    }
+
+    th {
+       background-color: lightseagreen;
+    }
+
+
+.view{
+    /* background-image: url("../../assets/img/view.png"); */
+    width: auto;
+    height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
